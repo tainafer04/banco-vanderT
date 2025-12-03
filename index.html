@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Nelita Conte | Desenvolvedora Web & Designer</title>
+    <title>Tainá | Desenvolvedora Web & Designer</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
         /* Variáveis de cores - TEMA LILAS */
@@ -270,21 +270,70 @@
             width: 300px;
             height: 300px;
             margin: 0 auto;
-            background: linear-gradient(135deg, var(--lilas-claro), var(--lilas-principal));
             border-radius: 50%;
             display: flex;
             align-items: center;
             justify-content: center;
-            color: var(--branco);
-            font-size: 100px;
             box-shadow: 0 10px 30px var(--sombra);
             position: relative;
             overflow: hidden;
             transition: transform 0.5s ease;
+            background-color: var(--lilas-pastel);
+            border: 5px solid var(--branco);
         }
         
         .foto-perfil:hover {
             transform: scale(1.05);
+        }
+        
+        .foto-placeholder {
+            width: 100%;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            color: var(--lilas-principal);
+            background-color: var(--lilas-pastel);
+        }
+        
+        .foto-placeholder i {
+            font-size: 100px;
+            margin-bottom: 10px;
+        }
+        
+        .foto-placeholder span {
+            font-size: 14px;
+            text-align: center;
+            padding: 0 20px;
+        }
+        
+        .upload-btn {
+            margin-top: 20px;
+            background: var(--lilas-principal);
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-weight: 600;
+            transition: all 0.3s ease;
+        }
+        
+        .upload-btn:hover {
+            background: var(--lilas-escuro);
+            transform: translateY(-2px);
+        }
+        
+        #foto-input {
+            display: none;
+        }
+        
+        .foto-perfil img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: none;
         }
         
         .sobre-texto {
@@ -695,6 +744,11 @@
             .portfolio-grid {
                 grid-template-columns: 1fr;
             }
+            
+            .foto-perfil {
+                width: 250px;
+                height: 250px;
+            }
         }
     </style>
 </head>
@@ -702,7 +756,7 @@
     <!-- Navegação -->
     <nav id="navbar">
         <div class="nav-container container">
-            <a href="#" class="logo">Nelita</a>
+            <a href="#" class="logo">Tainá</a>
             <ul class="nav-links">
                 <li><a href="#sobre">Sobre</a></li>
                 <li><a href="#portfolio">Portfólio</a></li>
@@ -717,7 +771,7 @@
     <!-- Header/Hero -->
     <header>
         <div class="container hero-content">
-            <h1>Nelita Conte</h1>
+            <h1>Tainá</h1>
             <p>Desenvolvedora Web & Designer Criativa</p>
             <div class="hero-btns">
                 <a href="#portfolio" class="btn">Ver Portfólio</a>
@@ -733,11 +787,17 @@
             <div class="sobre-container">
                 <div class="sobre-img">
                     <div class="foto-perfil">
-                        <i class="fas fa-user"></i>
+                        <div class="foto-placeholder" id="foto-placeholder">
+                            <i class="fas fa-user"></i>
+                            <span>Clique no botão para adicionar sua foto</span>
+                        </div>
+                        <img id="foto-preview" src="" alt="Foto de Tainá">
                     </div>
+                    <input type="file" id="foto-input" accept="image/*">
+                    <button class="upload-btn" id="upload-btn">Adicionar Foto</button>
                 </div>
                 <div class="sobre-texto">
-                    <h2>Olá, eu sou a Nelita Conte!</h2>
+                    <h2>Olá, eu sou a Tainá!</h2>
                     <p>Sou uma desenvolvedora web e designer apaixonada por criar experiências digitais bonitas e funcionais. Com background em design e desenvolvimento, combino estética e funcionalidade em cada projeto que realizo.</p>
                     
                     <p>Minha jornada no mundo da tecnologia começou há 3 anos, quando descobri minha paixão por transformar ideias em realidade digital. Desde então, tenho me dedicado a aprender novas tecnologias e acompanhar as tendências do mercado.</p>
@@ -918,7 +978,7 @@
                         </div>
                         <div class="texto-contato">
                             <h3>E-mail</h3>
-                            <p>nelita.conte@escola.pr.gov.br</p>
+                            <p>taina.dev@exemplo.com</p>
                         </div>
                     </div>
                     
@@ -961,7 +1021,7 @@
     <footer>
         <div class="container">
             <div class="footer-content">
-                <div class="footer-logo">Nelita Conte</div>
+                <div class="footer-logo">Tainá</div>
                 <p>Desenvolvedora Web & Designer</p>
                 <div class="footer-links">
                     <a href="#sobre">Sobre</a>
@@ -970,7 +1030,7 @@
                 </div>
             </div>
             <div class="copyright">
-                <p>&copy; 2023 Nelita Conte. Todos os direitos reservados.</p>
+                <p>&copy; 2023 Tainá. Todos os direitos reservados.</p>
             </div>
         </div>
     </footer>
@@ -1055,6 +1115,45 @@
             // Simulação de envio
             alert('Obrigada pela sua mensagem! Entrarei em contato em breve.');
             formContato.reset();
+        });
+        
+        // Upload de foto
+        const fotoInput = document.getElementById('foto-input');
+        const fotoPreview = document.getElementById('foto-preview');
+        const fotoPlaceholder = document.getElementById('foto-placeholder');
+        const uploadBtn = document.getElementById('upload-btn');
+        
+        uploadBtn.addEventListener('click', () => {
+            fotoInput.click();
+        });
+        
+        fotoInput.addEventListener('change', function() {
+            const file = this.files[0];
+            
+            if (file) {
+                const reader = new FileReader();
+                
+                reader.addEventListener('load', function() {
+                    fotoPreview.src = this.result;
+                    fotoPreview.style.display = 'block';
+                    fotoPlaceholder.style.display = 'none';
+                    
+                    // Salvar a foto no localStorage para persistência
+                    localStorage.setItem('tainaFoto', this.result);
+                });
+                
+                reader.readAsDataURL(file);
+            }
+        });
+        
+        // Verificar se há foto salva no localStorage
+        window.addEventListener('DOMContentLoaded', () => {
+            const savedFoto = localStorage.getItem('tainaFoto');
+            if (savedFoto) {
+                fotoPreview.src = savedFoto;
+                fotoPreview.style.display = 'block';
+                fotoPlaceholder.style.display = 'none';
+            }
         });
         
         // Animação de elementos ao scroll
