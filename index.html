@@ -6,17 +6,18 @@
     <title>Nelita Conte | Desenvolvedora Web & Designer</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
-        /* Variáveis de cores */
+        /* Variáveis de cores - TEMA LILAS */
         :root {
-            --rosa-principal: #e84393;
-            --rosa-escuro: #c13584;
-            --rosa-claro: #fd79a8;
-            --rosa-suave: #ffe4ec;
-            --rosa-pastel: #ffd6e7;
+            --lilas-principal: #9b59b6;
+            --lilas-escuro: #8e44ad;
+            --lilas-claro: #bb8fce;
+            --lilas-suave: #f4ecf7;
+            --lilas-pastel: #e8daef;
+            --lilas-azulado: #a569bd;
             --branco: #ffffff;
             --cinza-claro: #f8f9fa;
             --cinza-escuro: #2d3436;
-            --sombra: rgba(232, 67, 147, 0.15);
+            --sombra: rgba(155, 89, 182, 0.15);
         }
         
         /* Reset e estilos gerais */
@@ -59,7 +60,7 @@
         
         .btn {
             display: inline-block;
-            background: linear-gradient(135deg, var(--rosa-principal), var(--rosa-escuro));
+            background: linear-gradient(135deg, var(--lilas-principal), var(--lilas-escuro));
             color: var(--branco);
             padding: 12px 28px;
             border-radius: 50px;
@@ -88,7 +89,7 @@
             left: 0;
             width: 100%;
             height: 100%;
-            background: linear-gradient(135deg, var(--rosa-escuro), var(--rosa-principal));
+            background: linear-gradient(135deg, var(--lilas-escuro), var(--lilas-azulado));
             opacity: 0;
             transition: opacity 0.3s ease;
             z-index: -1;
@@ -116,13 +117,13 @@
             transform: translateX(-50%);
             width: 80px;
             height: 4px;
-            background: linear-gradient(to right, var(--rosa-claro), var(--rosa-principal));
+            background: linear-gradient(to right, var(--lilas-claro), var(--lilas-principal));
             border-radius: 2px;
         }
         
         /* Header e Navegação */
         header {
-            background: linear-gradient(135deg, var(--rosa-principal), var(--rosa-escuro));
+            background: linear-gradient(135deg, var(--lilas-principal), var(--lilas-escuro));
             color: var(--branco);
             padding: 100px 0 80px;
             text-align: center;
@@ -175,7 +176,7 @@
         
         .btn-secondary:hover {
             background: var(--branco);
-            color: var(--rosa-principal);
+            color: var(--lilas-principal);
         }
         
         nav {
@@ -204,7 +205,7 @@
         .logo {
             font-size: 1.8rem;
             font-weight: 700;
-            color: var(--rosa-principal);
+            color: var(--lilas-principal);
         }
         
         .nav-links {
@@ -229,12 +230,12 @@
             left: 0;
             width: 0;
             height: 2px;
-            background: var(--rosa-principal);
+            background: var(--lilas-principal);
             transition: width 0.3s ease;
         }
         
         .nav-links a:hover {
-            color: var(--rosa-principal);
+            color: var(--lilas-principal);
         }
         
         .nav-links a:hover::after {
@@ -245,12 +246,12 @@
             display: none;
             font-size: 1.5rem;
             cursor: pointer;
-            color: var(--rosa-principal);
+            color: var(--lilas-principal);
         }
         
         /* Seção Sobre */
         #sobre {
-            background-color: var(--rosa-suave);
+            background-color: var(--lilas-suave);
             position: relative;
         }
         
@@ -269,7 +270,7 @@
             width: 300px;
             height: 300px;
             margin: 0 auto;
-            background: linear-gradient(135deg, var(--rosa-claro), var(--rosa-principal));
+            background: linear-gradient(135deg, var(--lilas-claro), var(--lilas-principal));
             border-radius: 50%;
             display: flex;
             align-items: center;
@@ -291,7 +292,7 @@
         }
         
         .sobre-texto h2 {
-            color: var(--rosa-principal);
+            color: var(--lilas-principal);
         }
         
         .texto-destaque {
@@ -300,12 +301,12 @@
             border-radius: 10px;
             box-shadow: 0 5px 15px var(--sombra);
             margin: 25px 0;
-            border-left: 4px solid var(--rosa-principal);
+            border-left: 4px solid var(--lilas-principal);
         }
         
         .texto-destaque p {
             font-style: italic;
-            color: var(--rosa-escuro);
+            color: var(--lilas-escuro);
             margin: 0;
         }
         
@@ -322,11 +323,13 @@
             border-radius: 50px;
             font-size: 0.9rem;
             box-shadow: 0 3px 10px var(--sombra);
-            transition: transform 0.3s ease;
+            border: 1px solid var(--lilas-pastel);
+            transition: transform 0.3s ease, background-color 0.3s ease;
         }
         
         .habilidade:hover {
             transform: translateY(-3px);
+            background-color: var(--lilas-pastel);
         }
         
         /* Seção Portfólio */
@@ -343,8 +346,8 @@
         }
         
         .filtro-btn {
-            background: var(--rosa-suave);
-            color: var(--rosa-principal);
+            background: var(--lilas-suave);
+            color: var(--lilas-principal);
             padding: 8px 20px;
             border-radius: 50px;
             font-weight: 600;
@@ -354,7 +357,7 @@
         }
         
         .filtro-btn.active, .filtro-btn:hover {
-            background: var(--rosa-principal);
+            background: var(--lilas-principal);
             color: var(--branco);
         }
         
@@ -371,6 +374,7 @@
             box-shadow: 0 5px 15px var(--sombra);
             transition: transform 0.3s ease, box-shadow 0.3s ease;
             position: relative;
+            border: 1px solid var(--lilas-pastel);
         }
         
         .projeto:hover {
@@ -380,11 +384,11 @@
         
         .projeto-img {
             height: 200px;
-            background: var(--rosa-pastel);
+            background: var(--lilas-pastel);
             display: flex;
             align-items: center;
             justify-content: center;
-            color: var(--rosa-principal);
+            color: var(--lilas-principal);
             font-size: 50px;
         }
         
@@ -393,7 +397,7 @@
         }
         
         .projeto-conteudo h3 {
-            color: var(--rosa-principal);
+            color: var(--lilas-principal);
             margin-bottom: 10px;
         }
         
@@ -403,7 +407,7 @@
             left: 0;
             width: 100%;
             height: 100%;
-            background: rgba(232, 67, 147, 0.9);
+            background: rgba(155, 89, 182, 0.9);
             display: flex;
             align-items: center;
             justify-content: center;
@@ -428,18 +432,19 @@
             display: flex;
             align-items: center;
             justify-content: center;
-            color: var(--rosa-principal);
+            color: var(--lilas-principal);
             font-size: 1.2rem;
             transition: transform 0.3s ease;
         }
         
         .projeto-link:hover {
             transform: scale(1.1);
+            background-color: var(--lilas-claro);
         }
         
         /* Seção Contato */
         #contato {
-            background-color: var(--rosa-suave);
+            background-color: var(--lilas-suave);
         }
         
         .contato-container {
@@ -453,6 +458,7 @@
             padding: 30px;
             border-radius: 10px;
             box-shadow: 0 5px 20px var(--sombra);
+            border: 1px solid var(--lilas-pastel);
         }
         
         .grupo-form {
@@ -463,14 +469,14 @@
             display: block;
             margin-bottom: 8px;
             font-weight: 600;
-            color: var(--rosa-principal);
+            color: var(--lilas-principal);
         }
         
         .grupo-form input,
         .grupo-form textarea {
             width: 100%;
             padding: 12px 15px;
-            border: 1px solid var(--rosa-pastel);
+            border: 1px solid var(--lilas-pastel);
             border-radius: 5px;
             font-family: inherit;
             transition: border-color 0.3s ease, box-shadow 0.3s ease;
@@ -479,8 +485,8 @@
         .grupo-form input:focus,
         .grupo-form textarea:focus {
             outline: none;
-            border-color: var(--rosa-principal);
-            box-shadow: 0 0 0 3px rgba(232, 67, 147, 0.2);
+            border-color: var(--lilas-principal);
+            box-shadow: 0 0 0 3px rgba(155, 89, 182, 0.2);
         }
         
         .btn-enviar {
@@ -504,6 +510,7 @@
             border-radius: 10px;
             box-shadow: 0 5px 15px var(--sombra);
             transition: transform 0.3s ease;
+            border: 1px solid var(--lilas-pastel);
         }
         
         .item-contato:hover {
@@ -513,7 +520,7 @@
         .icone-contato {
             width: 50px;
             height: 50px;
-            background: linear-gradient(135deg, var(--rosa-claro), var(--rosa-principal));
+            background: linear-gradient(135deg, var(--lilas-claro), var(--lilas-principal));
             border-radius: 50%;
             display: flex;
             align-items: center;
@@ -524,7 +531,7 @@
         }
         
         .texto-contato h3 {
-            color: var(--rosa-principal);
+            color: var(--lilas-principal);
             margin-bottom: 5px;
         }
         
@@ -537,17 +544,17 @@
         .rede-social {
             width: 40px;
             height: 40px;
-            background: var(--rosa-suave);
+            background: var(--lilas-suave);
             border-radius: 50%;
             display: flex;
             align-items: center;
             justify-content: center;
-            color: var(--rosa-principal);
+            color: var(--lilas-principal);
             transition: all 0.3s ease;
         }
         
         .rede-social:hover {
-            background: var(--rosa-principal);
+            background: var(--lilas-principal);
             color: var(--branco);
             transform: translateY(-3px);
         }
@@ -559,7 +566,7 @@
             right: 30px;
             width: 60px;
             height: 60px;
-            background: linear-gradient(135deg, var(--rosa-principal), var(--rosa-escuro));
+            background: linear-gradient(135deg, var(--lilas-principal), var(--lilas-escuro));
             color: var(--branco);
             border-radius: 50%;
             display: flex;
@@ -578,7 +585,7 @@
         
         /* Footer */
         footer {
-            background: linear-gradient(135deg, var(--rosa-principal), var(--rosa-escuro));
+            background: linear-gradient(135deg, var(--lilas-principal), var(--lilas-escuro));
             color: var(--branco);
             padding: 50px 0 20px;
             text-align: center;
@@ -606,7 +613,7 @@
         }
         
         .footer-links a:hover {
-            color: var(--rosa-pastel);
+            color: var(--lilas-pastel);
         }
         
         .copyright {
