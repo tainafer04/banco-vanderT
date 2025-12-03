@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Nelita Conte | Desenvolvedora Web & Designer</title>
+    <title>Tainá | Desenvolvedora Web & Designer</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
         /* ESTILOS BÁSICOS */
@@ -27,19 +27,20 @@
             padding: 0 20px;
         }
         
-        /* NOVA PALETA COM #fa8fb1 */
+        /* NOVA PALETA COM TONS DE LILAS */
         :root {
-            --rosa-principal: #fa8fb1;
-            --rosa-escuro: #e84393;
-            --rosa-claro: #ffb6c1;
-            --rosa-suave: #fff0f5;
-            --rosa-pastel: #ffe4ec;
-            --rosa-destaque: #f06292;
+            --lilas-principal: #9c27b0;
+            --lilas-escuro: #7b1fa2;
+            --lilas-claro: #ba68c8;
+            --lilas-suave: #f3e5f5;
+            --lilas-pastel: #e1bee7;
+            --lilas-destaque: #ab47bc;
+            --lilas-claro-suave: #f8f1fa;
         }
         
         /* HEADER */
         header {
-            background: linear-gradient(135deg, var(--rosa-principal), var(--rosa-escuro));
+            background: linear-gradient(135deg, var(--lilas-principal), var(--lilas-escuro));
             color: white;
             padding: 100px 0 80px;
             text-align: center;
@@ -76,7 +77,7 @@
         
         .btn {
             display: inline-block;
-            background: linear-gradient(135deg, var(--rosa-principal), var(--rosa-escuro));
+            background: linear-gradient(135deg, var(--lilas-principal), var(--lilas-escuro));
             color: white;
             padding: 12px 28px;
             border-radius: 50px;
@@ -86,13 +87,13 @@
             border: none;
             cursor: pointer;
             transition: all 0.3s ease;
-            box-shadow: 0 4px 15px rgba(250, 143, 177, 0.3);
+            box-shadow: 0 4px 15px rgba(156, 39, 176, 0.3);
         }
         
         .btn:hover {
             transform: translateY(-3px);
-            box-shadow: 0 6px 20px rgba(250, 143, 177, 0.4);
-            background: linear-gradient(135deg, var(--rosa-escuro), var(--rosa-principal));
+            box-shadow: 0 6px 20px rgba(156, 39, 176, 0.4);
+            background: linear-gradient(135deg, var(--lilas-escuro), var(--lilas-destaque));
         }
         
         .btn-secondary {
@@ -103,7 +104,7 @@
         
         .btn-secondary:hover {
             background: white;
-            color: var(--rosa-principal);
+            color: var(--lilas-principal);
         }
         
         /* SEÇÕES */
@@ -112,11 +113,11 @@
         }
         
         #sobre {
-            background-color: var(--rosa-suave);
+            background-color: var(--lilas-suave);
         }
         
         #contato {
-            background-color: var(--rosa-suave);
+            background-color: var(--lilas-suave);
         }
         
         .sobre-container {
@@ -128,14 +129,17 @@
         .foto-perfil {
             width: 300px;
             height: 300px;
-            background: var(--rosa-pastel);
+            background: var(--lilas-pastel);
             border-radius: 50%;
             display: flex;
+            flex-direction: column;
             align-items: center;
             justify-content: center;
             border: 5px solid white;
-            box-shadow: 0 10px 30px rgba(250, 143, 177, 0.2);
+            box-shadow: 0 10px 30px rgba(156, 39, 176, 0.2);
             transition: transform 0.5s ease;
+            padding: 20px;
+            text-align: center;
         }
         
         .foto-perfil:hover {
@@ -143,8 +147,42 @@
         }
         
         .foto-placeholder i {
-            font-size: 60px;
-            color: var(--rosa-principal);
+            font-size: 80px;
+            color: var(--lilas-principal);
+            margin-bottom: 10px;
+        }
+        
+        .foto-placeholder p {
+            color: var(--lilas-escuro);
+            font-size: 14px;
+        }
+        
+        .foto-btn {
+            background: var(--lilas-principal);
+            color: white;
+            border: none;
+            padding: 8px 16px;
+            border-radius: 20px;
+            font-size: 14px;
+            cursor: pointer;
+            margin-top: 10px;
+            transition: all 0.3s ease;
+        }
+        
+        .foto-btn:hover {
+            background: var(--lilas-escuro);
+        }
+        
+        #foto-input {
+            display: none;
+        }
+        
+        #foto-preview {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 50%;
+            display: none;
         }
         
         .section-title {
@@ -161,7 +199,7 @@
             transform: translateX(-50%);
             width: 80px;
             height: 4px;
-            background: linear-gradient(to right, var(--rosa-claro), var(--rosa-principal));
+            background: linear-gradient(to right, var(--lilas-claro), var(--lilas-principal));
             border-radius: 2px;
         }
         
@@ -191,7 +229,7 @@
         .logo {
             font-size: 1.8rem;
             font-weight: 700;
-            color: var(--rosa-principal);
+            color: var(--lilas-principal);
         }
         
         .nav-links {
@@ -215,12 +253,12 @@
             left: 0;
             width: 0;
             height: 2px;
-            background: var(--rosa-principal);
+            background: var(--lilas-principal);
             transition: width 0.3s ease;
         }
         
         .nav-links a:hover {
-            color: var(--rosa-principal);
+            color: var(--lilas-principal);
         }
         
         .nav-links a:hover::after {
@@ -240,13 +278,14 @@
             padding: 8px 15px;
             border-radius: 50px;
             font-size: 0.9rem;
-            box-shadow: 0 3px 10px rgba(250, 143, 177, 0.15);
-            border: 1px solid var(--rosa-pastel);
-            transition: transform 0.3s ease;
+            box-shadow: 0 3px 10px rgba(156, 39, 176, 0.15);
+            border: 1px solid var(--lilas-pastel);
+            transition: transform 0.3s ease, background-color 0.3s ease;
         }
         
         .habilidade:hover {
             transform: translateY(-3px);
+            background-color: var(--lilas-suave);
         }
         
         /* INTERESSES PESSOAIS */
@@ -258,7 +297,7 @@
         }
         
         .interesse {
-            background: linear-gradient(135deg, var(--rosa-principal), var(--rosa-destaque));
+            background: linear-gradient(135deg, var(--lilas-principal), var(--lilas-destaque));
             color: white;
             padding: 10px 20px;
             border-radius: 50px;
@@ -266,7 +305,7 @@
             display: flex;
             align-items: center;
             gap: 8px;
-            box-shadow: 0 4px 15px rgba(250, 143, 177, 0.3);
+            box-shadow: 0 4px 15px rgba(156, 39, 176, 0.3);
             transition: transform 0.3s ease;
         }
         
@@ -289,8 +328,8 @@
             background: white;
             padding: 30px;
             border-radius: 10px;
-            box-shadow: 0 5px 20px rgba(250, 143, 177, 0.15);
-            border: 1px solid var(--rosa-pastel);
+            box-shadow: 0 5px 20px rgba(156, 39, 176, 0.15);
+            border: 1px solid var(--lilas-pastel);
         }
         
         .grupo-form {
@@ -301,14 +340,14 @@
             display: block;
             margin-bottom: 8px;
             font-weight: 600;
-            color: var(--rosa-principal);
+            color: var(--lilas-principal);
         }
         
         .grupo-form input,
         .grupo-form textarea {
             width: 100%;
             padding: 12px 15px;
-            border: 1px solid var(--rosa-pastel);
+            border: 1px solid var(--lilas-pastel);
             border-radius: 5px;
             font-family: inherit;
             transition: border-color 0.3s ease, box-shadow 0.3s ease;
@@ -317,8 +356,8 @@
         .grupo-form input:focus,
         .grupo-form textarea:focus {
             outline: none;
-            border-color: var(--rosa-principal);
-            box-shadow: 0 0 0 3px rgba(250, 143, 177, 0.1);
+            border-color: var(--lilas-principal);
+            box-shadow: 0 0 0 3px rgba(156, 39, 176, 0.1);
         }
         
         .btn-enviar {
@@ -341,8 +380,8 @@
             background: white;
             padding: 20px;
             border-radius: 10px;
-            box-shadow: 0 5px 15px rgba(250, 143, 177, 0.15);
-            border: 1px solid var(--rosa-pastel);
+            box-shadow: 0 5px 15px rgba(156, 39, 176, 0.15);
+            border: 1px solid var(--lilas-pastel);
             transition: transform 0.3s ease;
         }
         
@@ -353,7 +392,7 @@
         .icone-contato {
             width: 50px;
             height: 50px;
-            background: linear-gradient(135deg, var(--rosa-claro), var(--rosa-principal));
+            background: linear-gradient(135deg, var(--lilas-claro), var(--lilas-principal));
             border-radius: 50%;
             display: flex;
             align-items: center;
@@ -364,7 +403,7 @@
         }
         
         .texto-contato h3 {
-            color: var(--rosa-principal);
+            color: var(--lilas-principal);
             margin-bottom: 5px;
         }
         
@@ -377,25 +416,25 @@
         .rede-social {
             width: 40px;
             height: 40px;
-            background: var(--rosa-suave);
+            background: var(--lilas-suave);
             border-radius: 50%;
             display: flex;
             align-items: center;
             justify-content: center;
-            color: var(--rosa-principal);
+            color: var(--lilas-principal);
             transition: all 0.3s ease;
             text-decoration: none;
         }
         
         .rede-social:hover {
-            background: var(--rosa-principal);
+            background: var(--lilas-principal);
             color: white;
             transform: translateY(-3px);
         }
         
         /* FOOTER */
         footer {
-            background: linear-gradient(135deg, var(--rosa-principal), var(--rosa-escuro));
+            background: linear-gradient(135deg, var(--lilas-principal), var(--lilas-escuro));
             color: white;
             padding: 50px 0 20px;
             text-align: center;
@@ -421,7 +460,7 @@
         }
         
         .footer-links a:hover {
-            color: var(--rosa-pastel);
+            color: var(--lilas-pastel);
         }
         
         .copyright {
@@ -438,21 +477,21 @@
             right: 30px;
             width: 50px;
             height: 50px;
-            background: linear-gradient(135deg, var(--rosa-principal), var(--rosa-escuro));
+            background: linear-gradient(135deg, var(--lilas-principal), var(--lilas-escuro));
             color: white;
             border-radius: 50%;
             display: none;
             align-items: center;
             justify-content: center;
             text-decoration: none;
-            box-shadow: 0 4px 15px rgba(250, 143, 177, 0.4);
+            box-shadow: 0 4px 15px rgba(156, 39, 176, 0.4);
             transition: all 0.3s ease;
             z-index: 100;
         }
         
         .btn-topo:hover {
             transform: translateY(-3px);
-            box-shadow: 0 6px 20px rgba(250, 143, 177, 0.5);
+            box-shadow: 0 6px 20px rgba(156, 39, 176, 0.5);
         }
         
         /* ANIMAÇÕES */
@@ -505,7 +544,7 @@
     <!-- Navegação -->
     <nav id="navbar">
         <div class="nav-container container">
-            <a href="#" class="logo">Nelita</a>
+            <a href="#" class="logo">Tainá</a>
             <ul class="nav-links">
                 <li><a href="#sobre">Sobre</a></li>
                 <li><a href="#contato">Contato</a></li>
@@ -516,7 +555,7 @@
     <!-- Header/Hero -->
     <header>
         <div class="container hero-content">
-            <h1 class="fade-in">Nelita Conte</h1>
+            <h1 class="fade-in">Tainá</h1>
             <p class="fade-in">Desenvolvedora Web & Designer Criativa</p>
             <div class="hero-btns fade-in">
                 <a href="#contato" class="btn">Entrar em Contato</a>
@@ -531,15 +570,18 @@
             <div class="sobre-container">
                 <div class="sobre-img">
                     <div class="foto-perfil">
-                        <div class="foto-placeholder">
-                            <i class="fas fa-camera"></i>
+                        <div class="foto-placeholder" id="foto-placeholder">
+                            <i class="fas fa-user"></i>
                             <p>Adicione sua foto aqui</p>
                         </div>
+                        <img id="foto-preview" src="" alt="Foto de Tainá">
+                        <button class="foto-btn" id="foto-btn">Adicionar Foto</button>
+                        <input type="file" id="foto-input" accept="image/*">
                     </div>
                 </div>
                 <div class="sobre-texto">
-                    <h2>Olá, eu sou a Nelita Conte!</h2>
-                    <p>Meu nome é Nelita, tenho 18 anos e sou uma desenvolvedora web e designer apaixonada por criar experiências digitais bonitas e funcionais. Com background em design e desenvolvimento, combino estética e funcionalidade em cada projeto que realizo.</p>
+                    <h2>Olá, eu sou a Tainá!</h2>
+                    <p>Meu nome é Tainá, tenho 18 anos e sou uma desenvolvedora web e designer apaixonada por criar experiências digitais bonitas e funcionais. Com background em design e desenvolvimento, combino estética e funcionalidade em cada projeto que realizo.</p>
                     
                     <p>Minha jornada no mundo da tecnologia começou durante o ensino médio, quando descobri minha paixão por transformar ideias em realidade digital. Desde então, tenho me dedicado a aprender novas tecnologias e acompanhar as tendências do mercado, sempre buscando evoluir como profissional.</p>
                     
@@ -572,6 +614,8 @@
                         <span class="habilidade">Figma</span>
                         <span class="habilidade">Git</span>
                         <span class="habilidade">Responsive Design</span>
+                        <span class="habilidade">Bootstrap</span>
+                        <span class="habilidade">Photoshop</span>
                     </div>
                 </div>
             </div>
@@ -616,8 +660,8 @@
                         </div>
                         <div class="texto-contato">
                             <h3>E-mail</h3>
-                            <p>nelita.conte@escola.pr.gov.br</p>
-                            <p>contato.nelita@gmail.com</p>
+                            <p>taina.dev@exemplo.com</p>
+                            <p>contato.taina@gmail.com</p>
                         </div>
                     </div>
                     
@@ -656,7 +700,7 @@
     <footer>
         <div class="container">
             <div class="footer-content">
-                <div class="footer-logo">Nelita Conte</div>
+                <div class="footer-logo">Tainá</div>
                 <p>Desenvolvedora Web & Designer</p>
                 <div class="footer-links">
                     <a href="#sobre">Sobre</a>
@@ -664,7 +708,7 @@
                 </div>
             </div>
             <div class="copyright">
-                <p>&copy; 2023 Nelita Conte. Todos os direitos reservados.</p>
+                <p>&copy; 2023 Tainá. Todos os direitos reservados.</p>
             </div>
         </div>
     </footer>
@@ -675,6 +719,45 @@
     </a>
 
     <script>
+        // Upload de foto
+        const fotoInput = document.getElementById('foto-input');
+        const fotoPreview = document.getElementById('foto-preview');
+        const fotoPlaceholder = document.getElementById('foto-placeholder');
+        const fotoBtn = document.getElementById('foto-btn');
+        
+        fotoBtn.addEventListener('click', () => {
+            fotoInput.click();
+        });
+        
+        fotoInput.addEventListener('change', function() {
+            const file = this.files[0];
+            
+            if (file) {
+                const reader = new FileReader();
+                
+                reader.addEventListener('load', function() {
+                    fotoPreview.src = this.result;
+                    fotoPreview.style.display = 'block';
+                    fotoPlaceholder.style.display = 'none';
+                    
+                    // Salvar no localStorage para persistência
+                    localStorage.setItem('tainaFoto', this.result);
+                });
+                
+                reader.readAsDataURL(file);
+            }
+        });
+        
+        // Carregar foto salva ao iniciar
+        window.addEventListener('DOMContentLoaded', () => {
+            const savedFoto = localStorage.getItem('tainaFoto');
+            if (savedFoto) {
+                fotoPreview.src = savedFoto;
+                fotoPreview.style.display = 'block';
+                fotoPlaceholder.style.display = 'none';
+            }
+        });
+        
         // Formulário de contato
         const formContato = document.getElementById('formContato');
         
