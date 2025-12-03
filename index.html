@@ -3,24 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tainá | Desenvolvedora Web & Designer</title>
+    <title>Nelita Conte | Desenvolvedora Web & Designer</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
-        /* Variáveis de cores - TEMA LILAS */
-        :root {
-            --lilas-principal: #9b59b6;
-            --lilas-escuro: #8e44ad;
-            --lilas-claro: #bb8fce;
-            --lilas-suave: #f4ecf7;
-            --lilas-pastel: #e8daef;
-            --lilas-azulado: #a569bd;
-            --branco: #ffffff;
-            --cinza-claro: #f8f9fa;
-            --cinza-escuro: #2d3436;
-            --sombra: rgba(155, 89, 182, 0.15);
-        }
-        
-        /* Reset e estilos gerais */
+        /* ESTILOS BÁSICOS */
         * {
             margin: 0;
             padding: 0;
@@ -30,25 +16,8 @@
         body {
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             line-height: 1.6;
-            color: var(--cinza-escuro);
-            background-color: var(--branco);
-            overflow-x: hidden;
-        }
-        
-        h1, h2, h3, h4 {
-            font-weight: 700;
-            line-height: 1.2;
-            margin-bottom: 1rem;
-        }
-        
-        p {
-            margin-bottom: 1rem;
-        }
-        
-        a {
-            text-decoration: none;
-            color: inherit;
-            transition: all 0.3s ease;
+            color: #2d3436;
+            background-color: #ffffff;
         }
         
         .container {
@@ -58,73 +27,20 @@
             padding: 0 20px;
         }
         
-        .btn {
-            display: inline-block;
-            background: linear-gradient(135deg, var(--lilas-principal), var(--lilas-escuro));
-            color: var(--branco);
-            padding: 12px 28px;
-            border-radius: 50px;
-            font-weight: 600;
-            border: none;
-            cursor: pointer;
-            transition: all 0.3s ease;
-            box-shadow: 0 4px 15px var(--sombra);
-            position: relative;
-            overflow: hidden;
+        /* NOVA PALETA COM #fa8fb1 */
+        :root {
+            --rosa-principal: #fa8fb1;
+            --rosa-escuro: #e84393;
+            --rosa-claro: #ffb6c1;
+            --rosa-suave: #fff0f5;
+            --rosa-pastel: #ffe4ec;
+            --rosa-destaque: #f06292;
         }
         
-        .btn:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 6px 20px var(--sombra);
-        }
-        
-        .btn:active {
-            transform: translateY(-1px);
-        }
-        
-        .btn::after {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: linear-gradient(135deg, var(--lilas-escuro), var(--lilas-azulado));
-            opacity: 0;
-            transition: opacity 0.3s ease;
-            z-index: -1;
-        }
-        
-        .btn:hover::after {
-            opacity: 1;
-        }
-        
-        section {
-            padding: 80px 0;
-        }
-        
-        .section-title {
-            text-align: center;
-            margin-bottom: 50px;
-            position: relative;
-        }
-        
-        .section-title::after {
-            content: '';
-            position: absolute;
-            bottom: -15px;
-            left: 50%;
-            transform: translateX(-50%);
-            width: 80px;
-            height: 4px;
-            background: linear-gradient(to right, var(--lilas-claro), var(--lilas-principal));
-            border-radius: 2px;
-        }
-        
-        /* Header e Navegação */
+        /* HEADER */
         header {
-            background: linear-gradient(135deg, var(--lilas-principal), var(--lilas-escuro));
-            color: var(--branco);
+            background: linear-gradient(135deg, var(--rosa-principal), var(--rosa-escuro));
+            color: white;
             padding: 100px 0 80px;
             text-align: center;
             position: relative;
@@ -151,42 +67,113 @@
         .hero-content h1 {
             font-size: 3.5rem;
             margin-bottom: 1rem;
-            animation: fadeInDown 1s ease;
         }
         
         .hero-content p {
             font-size: 1.3rem;
             margin-bottom: 2rem;
-            animation: fadeInUp 1s ease;
-            opacity: 0.9;
         }
         
-        .hero-btns {
-            display: flex;
-            justify-content: center;
-            gap: 20px;
-            animation: fadeIn 1.5s ease;
+        .btn {
+            display: inline-block;
+            background: linear-gradient(135deg, var(--rosa-principal), var(--rosa-escuro));
+            color: white;
+            padding: 12px 28px;
+            border-radius: 50px;
+            font-weight: 600;
+            text-decoration: none;
+            margin: 5px;
+            border: none;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(250, 143, 177, 0.3);
+        }
+        
+        .btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 6px 20px rgba(250, 143, 177, 0.4);
+            background: linear-gradient(135deg, var(--rosa-escuro), var(--rosa-principal));
         }
         
         .btn-secondary {
             background: transparent;
-            border: 2px solid var(--branco);
+            border: 2px solid white;
             box-shadow: none;
         }
         
         .btn-secondary:hover {
-            background: var(--branco);
-            color: var(--lilas-principal);
+            background: white;
+            color: var(--rosa-principal);
         }
         
+        /* SEÇÕES */
+        section {
+            padding: 80px 0;
+        }
+        
+        #sobre {
+            background-color: var(--rosa-suave);
+        }
+        
+        #contato {
+            background-color: var(--rosa-suave);
+        }
+        
+        .sobre-container {
+            display: flex;
+            align-items: center;
+            gap: 50px;
+        }
+        
+        .foto-perfil {
+            width: 300px;
+            height: 300px;
+            background: var(--rosa-pastel);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border: 5px solid white;
+            box-shadow: 0 10px 30px rgba(250, 143, 177, 0.2);
+            transition: transform 0.5s ease;
+        }
+        
+        .foto-perfil:hover {
+            transform: scale(1.05);
+        }
+        
+        .foto-placeholder i {
+            font-size: 60px;
+            color: var(--rosa-principal);
+        }
+        
+        .section-title {
+            text-align: center;
+            margin-bottom: 50px;
+            position: relative;
+        }
+        
+        .section-title::after {
+            content: '';
+            position: absolute;
+            bottom: -15px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 80px;
+            height: 4px;
+            background: linear-gradient(to right, var(--rosa-claro), var(--rosa-principal));
+            border-radius: 2px;
+        }
+        
+        /* NAVEGAÇÃO */
         nav {
             position: fixed;
             top: 0;
-            left: 0;
             width: 100%;
-            background: rgba(255, 255, 255, 0.95);
-            box-shadow: 0 2px 20px rgba(0, 0, 0, 0.1);
+            background: white;
+            padding: 15px 0;
             z-index: 1000;
+            box-shadow: 0 2px 20px rgba(0,0,0,0.1);
             transition: all 0.3s ease;
         }
         
@@ -199,27 +186,25 @@
             display: flex;
             justify-content: space-between;
             align-items: center;
-            padding: 15px 20px;
         }
         
         .logo {
             font-size: 1.8rem;
             font-weight: 700;
-            color: var(--lilas-principal);
+            color: var(--rosa-principal);
         }
         
         .nav-links {
             display: flex;
             list-style: none;
-        }
-        
-        .nav-links li {
-            margin-left: 30px;
+            gap: 30px;
         }
         
         .nav-links a {
+            text-decoration: none;
+            color: #2d3436;
             font-weight: 600;
-            color: var(--cinza-escuro);
+            transition: color 0.3s ease;
             position: relative;
         }
         
@@ -230,135 +215,19 @@
             left: 0;
             width: 0;
             height: 2px;
-            background: var(--lilas-principal);
+            background: var(--rosa-principal);
             transition: width 0.3s ease;
         }
         
         .nav-links a:hover {
-            color: var(--lilas-principal);
+            color: var(--rosa-principal);
         }
         
         .nav-links a:hover::after {
             width: 100%;
         }
         
-        .mobile-menu {
-            display: none;
-            font-size: 1.5rem;
-            cursor: pointer;
-            color: var(--lilas-principal);
-        }
-        
-        /* Seção Sobre */
-        #sobre {
-            background-color: var(--lilas-suave);
-            position: relative;
-        }
-        
-        .sobre-container {
-            display: flex;
-            align-items: center;
-            gap: 50px;
-        }
-        
-        .sobre-img {
-            flex: 1;
-            text-align: center;
-        }
-        
-        .foto-perfil {
-            width: 300px;
-            height: 300px;
-            margin: 0 auto;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            box-shadow: 0 10px 30px var(--sombra);
-            position: relative;
-            overflow: hidden;
-            transition: transform 0.5s ease;
-            background-color: var(--lilas-pastel);
-            border: 5px solid var(--branco);
-        }
-        
-        .foto-perfil:hover {
-            transform: scale(1.05);
-        }
-        
-        .foto-placeholder {
-            width: 100%;
-            height: 100%;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            color: var(--lilas-principal);
-            background-color: var(--lilas-pastel);
-        }
-        
-        .foto-placeholder i {
-            font-size: 100px;
-            margin-bottom: 10px;
-        }
-        
-        .foto-placeholder span {
-            font-size: 14px;
-            text-align: center;
-            padding: 0 20px;
-        }
-        
-        .upload-btn {
-            margin-top: 20px;
-            background: var(--lilas-principal);
-            color: white;
-            border: none;
-            padding: 10px 20px;
-            border-radius: 5px;
-            cursor: pointer;
-            font-weight: 600;
-            transition: all 0.3s ease;
-        }
-        
-        .upload-btn:hover {
-            background: var(--lilas-escuro);
-            transform: translateY(-2px);
-        }
-        
-        #foto-input {
-            display: none;
-        }
-        
-        .foto-perfil img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            display: none;
-        }
-        
-        .sobre-texto {
-            flex: 1;
-        }
-        
-        .sobre-texto h2 {
-            color: var(--lilas-principal);
-        }
-        
-        .texto-destaque {
-            background: var(--branco);
-            padding: 25px;
-            border-radius: 10px;
-            box-shadow: 0 5px 15px var(--sombra);
-            margin: 25px 0;
-            border-left: 4px solid var(--lilas-principal);
-        }
-        
-        .texto-destaque p {
-            font-style: italic;
-            color: var(--lilas-escuro);
-            margin: 0;
-        }
-        
+        /* HABILIDADES */
         .habilidades {
             display: flex;
             flex-wrap: wrap;
@@ -367,135 +236,49 @@
         }
         
         .habilidade {
-            background: var(--branco);
+            background: white;
             padding: 8px 15px;
             border-radius: 50px;
             font-size: 0.9rem;
-            box-shadow: 0 3px 10px var(--sombra);
-            border: 1px solid var(--lilas-pastel);
-            transition: transform 0.3s ease, background-color 0.3s ease;
+            box-shadow: 0 3px 10px rgba(250, 143, 177, 0.15);
+            border: 1px solid var(--rosa-pastel);
+            transition: transform 0.3s ease;
         }
         
         .habilidade:hover {
             transform: translateY(-3px);
-            background-color: var(--lilas-pastel);
         }
         
-        /* Seção Portfólio */
-        #portfolio {
-            background-color: var(--branco);
-        }
-        
-        .portfolio-filtros {
+        /* INTERESSES PESSOAIS */
+        .interesses {
             display: flex;
-            justify-content: center;
-            gap: 15px;
-            margin-bottom: 40px;
             flex-wrap: wrap;
-        }
-        
-        .filtro-btn {
-            background: var(--lilas-suave);
-            color: var(--lilas-principal);
-            padding: 8px 20px;
-            border-radius: 50px;
-            font-weight: 600;
-            cursor: pointer;
-            transition: all 0.3s ease;
-            border: none;
-        }
-        
-        .filtro-btn.active, .filtro-btn:hover {
-            background: var(--lilas-principal);
-            color: var(--branco);
-        }
-        
-        .portfolio-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-            gap: 30px;
-        }
-        
-        .projeto {
-            background: var(--branco);
-            border-radius: 10px;
-            overflow: hidden;
-            box-shadow: 0 5px 15px var(--sombra);
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-            position: relative;
-            border: 1px solid var(--lilas-pastel);
-        }
-        
-        .projeto:hover {
-            transform: translateY(-10px);
-            box-shadow: 0 15px 30px var(--sombra);
-        }
-        
-        .projeto-img {
-            height: 200px;
-            background: var(--lilas-pastel);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: var(--lilas-principal);
-            font-size: 50px;
-        }
-        
-        .projeto-conteudo {
-            padding: 20px;
-        }
-        
-        .projeto-conteudo h3 {
-            color: var(--lilas-principal);
-            margin-bottom: 10px;
-        }
-        
-        .projeto-overlay {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: rgba(155, 89, 182, 0.9);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            opacity: 0;
-            transition: opacity 0.3s ease;
-        }
-        
-        .projeto:hover .projeto-overlay {
-            opacity: 1;
-        }
-        
-        .projeto-links {
-            display: flex;
             gap: 15px;
+            margin-top: 20px;
         }
         
-        .projeto-link {
-            width: 50px;
-            height: 50px;
-            background: var(--branco);
-            border-radius: 50%;
+        .interesse {
+            background: linear-gradient(135deg, var(--rosa-principal), var(--rosa-destaque));
+            color: white;
+            padding: 10px 20px;
+            border-radius: 50px;
+            font-size: 0.9rem;
             display: flex;
             align-items: center;
-            justify-content: center;
-            color: var(--lilas-principal);
-            font-size: 1.2rem;
+            gap: 8px;
+            box-shadow: 0 4px 15px rgba(250, 143, 177, 0.3);
             transition: transform 0.3s ease;
         }
         
-        .projeto-link:hover {
-            transform: scale(1.1);
-            background-color: var(--lilas-claro);
+        .interesse:hover {
+            transform: translateY(-3px);
         }
         
-        /* Seção Contato */
-        #contato {
-            background-color: var(--lilas-suave);
+        .interesse i {
+            font-size: 1rem;
         }
         
+        /* FORMULÁRIO DE CONTATO */
         .contato-container {
             display: grid;
             grid-template-columns: 1fr 1fr;
@@ -503,11 +286,11 @@
         }
         
         .formulario-contato {
-            background: var(--branco);
+            background: white;
             padding: 30px;
             border-radius: 10px;
-            box-shadow: 0 5px 20px var(--sombra);
-            border: 1px solid var(--lilas-pastel);
+            box-shadow: 0 5px 20px rgba(250, 143, 177, 0.15);
+            border: 1px solid var(--rosa-pastel);
         }
         
         .grupo-form {
@@ -518,14 +301,14 @@
             display: block;
             margin-bottom: 8px;
             font-weight: 600;
-            color: var(--lilas-principal);
+            color: var(--rosa-principal);
         }
         
         .grupo-form input,
         .grupo-form textarea {
             width: 100%;
             padding: 12px 15px;
-            border: 1px solid var(--lilas-pastel);
+            border: 1px solid var(--rosa-pastel);
             border-radius: 5px;
             font-family: inherit;
             transition: border-color 0.3s ease, box-shadow 0.3s ease;
@@ -534,8 +317,8 @@
         .grupo-form input:focus,
         .grupo-form textarea:focus {
             outline: none;
-            border-color: var(--lilas-principal);
-            box-shadow: 0 0 0 3px rgba(155, 89, 182, 0.2);
+            border-color: var(--rosa-principal);
+            box-shadow: 0 0 0 3px rgba(250, 143, 177, 0.1);
         }
         
         .btn-enviar {
@@ -544,6 +327,7 @@
             font-size: 1rem;
         }
         
+        /* INFO CONTATO */
         .info-contato {
             display: flex;
             flex-direction: column;
@@ -554,12 +338,12 @@
             display: flex;
             align-items: flex-start;
             gap: 15px;
-            background: var(--branco);
+            background: white;
             padding: 20px;
             border-radius: 10px;
-            box-shadow: 0 5px 15px var(--sombra);
+            box-shadow: 0 5px 15px rgba(250, 143, 177, 0.15);
+            border: 1px solid var(--rosa-pastel);
             transition: transform 0.3s ease;
-            border: 1px solid var(--lilas-pastel);
         }
         
         .item-contato:hover {
@@ -569,18 +353,18 @@
         .icone-contato {
             width: 50px;
             height: 50px;
-            background: linear-gradient(135deg, var(--lilas-claro), var(--lilas-principal));
+            background: linear-gradient(135deg, var(--rosa-claro), var(--rosa-principal));
             border-radius: 50%;
             display: flex;
             align-items: center;
             justify-content: center;
-            color: var(--branco);
+            color: white;
             font-size: 1.2rem;
             flex-shrink: 0;
         }
         
         .texto-contato h3 {
-            color: var(--lilas-principal);
+            color: var(--rosa-principal);
             margin-bottom: 5px;
         }
         
@@ -593,55 +377,28 @@
         .rede-social {
             width: 40px;
             height: 40px;
-            background: var(--lilas-suave);
+            background: var(--rosa-suave);
             border-radius: 50%;
             display: flex;
             align-items: center;
             justify-content: center;
-            color: var(--lilas-principal);
+            color: var(--rosa-principal);
             transition: all 0.3s ease;
+            text-decoration: none;
         }
         
         .rede-social:hover {
-            background: var(--lilas-principal);
-            color: var(--branco);
+            background: var(--rosa-principal);
+            color: white;
             transform: translateY(-3px);
         }
         
-        /* Botão flutuante */
-        .btn-flutuante {
-            position: fixed;
-            bottom: 30px;
-            right: 30px;
-            width: 60px;
-            height: 60px;
-            background: linear-gradient(135deg, var(--lilas-principal), var(--lilas-escuro));
-            color: var(--branco);
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 1.5rem;
-            box-shadow: 0 5px 15px var(--sombra);
-            z-index: 99;
-            cursor: pointer;
-            transition: all 0.3s ease;
-        }
-        
-        .btn-flutuante:hover {
-            transform: scale(1.1);
-        }
-        
-        /* Footer */
+        /* FOOTER */
         footer {
-            background: linear-gradient(135deg, var(--lilas-principal), var(--lilas-escuro));
-            color: var(--branco);
+            background: linear-gradient(135deg, var(--rosa-principal), var(--rosa-escuro));
+            color: white;
             padding: 50px 0 20px;
             text-align: center;
-        }
-        
-        .footer-content {
-            margin-bottom: 30px;
         }
         
         .footer-logo {
@@ -658,11 +415,13 @@
         }
         
         .footer-links a {
+            color: white;
+            text-decoration: none;
             transition: color 0.3s ease;
         }
         
         .footer-links a:hover {
-            color: var(--lilas-pastel);
+            color: var(--rosa-pastel);
         }
         
         .copyright {
@@ -672,12 +431,31 @@
             opacity: 0.8;
         }
         
-        /* Animações */
-        @keyframes fadeIn {
-            from { opacity: 0; }
-            to { opacity: 1; }
+        /* BOTÃO VOLTAR AO TOPO */
+        .btn-topo {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            width: 50px;
+            height: 50px;
+            background: linear-gradient(135deg, var(--rosa-principal), var(--rosa-escuro));
+            color: white;
+            border-radius: 50%;
+            display: none;
+            align-items: center;
+            justify-content: center;
+            text-decoration: none;
+            box-shadow: 0 4px 15px rgba(250, 143, 177, 0.4);
+            transition: all 0.3s ease;
+            z-index: 100;
         }
         
+        .btn-topo:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 6px 20px rgba(250, 143, 177, 0.5);
+        }
+        
+        /* ANIMAÇÕES */
         @keyframes fadeInUp {
             from {
                 opacity: 0;
@@ -689,30 +467,12 @@
             }
         }
         
-        @keyframes fadeInDown {
-            from {
-                opacity: 0;
-                transform: translateY(-20px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-        
         .fade-in {
-            opacity: 0;
-            transform: translateY(20px);
-            transition: opacity 0.5s ease, transform 0.5s ease;
+            animation: fadeInUp 0.6s ease-out;
         }
         
-        .fade-in.visible {
-            opacity: 1;
-            transform: translateY(0);
-        }
-        
-        /* Responsividade */
-        @media (max-width: 992px) {
+        /* RESPONSIVIDADE */
+        @media (max-width: 768px) {
             .sobre-container {
                 flex-direction: column;
                 text-align: center;
@@ -721,33 +481,22 @@
             .contato-container {
                 grid-template-columns: 1fr;
             }
-        }
-        
-        @media (max-width: 768px) {
+            
             .hero-content h1 {
                 font-size: 2.5rem;
-            }
-            
-            .hero-btns {
-                flex-direction: column;
-                align-items: center;
             }
             
             .nav-links {
                 display: none;
             }
             
-            .mobile-menu {
-                display: block;
-            }
-            
-            .portfolio-grid {
-                grid-template-columns: 1fr;
-            }
-            
             .foto-perfil {
                 width: 250px;
                 height: 250px;
+            }
+            
+            .interesses {
+                justify-content: center;
             }
         }
     </style>
@@ -756,26 +505,21 @@
     <!-- Navegação -->
     <nav id="navbar">
         <div class="nav-container container">
-            <a href="#" class="logo">Tainá</a>
+            <a href="#" class="logo">Nelita</a>
             <ul class="nav-links">
                 <li><a href="#sobre">Sobre</a></li>
-                <li><a href="#portfolio">Portfólio</a></li>
                 <li><a href="#contato">Contato</a></li>
             </ul>
-            <div class="mobile-menu">
-                <i class="fas fa-bars"></i>
-            </div>
         </div>
     </nav>
     
     <!-- Header/Hero -->
     <header>
         <div class="container hero-content">
-            <h1>Tainá</h1>
-            <p>Desenvolvedora Web & Designer Criativa</p>
-            <div class="hero-btns">
-                <a href="#portfolio" class="btn">Ver Portfólio</a>
-                <a href="#contato" class="btn btn-secondary">Entrar em Contato</a>
+            <h1 class="fade-in">Nelita Conte</h1>
+            <p class="fade-in">Desenvolvedora Web & Designer Criativa</p>
+            <div class="hero-btns fade-in">
+                <a href="#contato" class="btn">Entrar em Contato</a>
             </div>
         </div>
     </header>
@@ -787,30 +531,36 @@
             <div class="sobre-container">
                 <div class="sobre-img">
                     <div class="foto-perfil">
-                        <div class="foto-placeholder" id="foto-placeholder">
-                            <i class="fas fa-user"></i>
-                            <span>Clique no botão para adicionar sua foto</span>
+                        <div class="foto-placeholder">
+                            <i class="fas fa-camera"></i>
+                            <p>Adicione sua foto aqui</p>
                         </div>
-                        <img id="foto-preview" src="" alt="Foto de Tainá">
                     </div>
-                    <input type="file" id="foto-input" accept="image/*">
-                    <button class="upload-btn" id="upload-btn">Adicionar Foto</button>
                 </div>
                 <div class="sobre-texto">
-                    <h2>Olá, eu sou a Tainá!</h2>
-                    <p>Sou uma desenvolvedora web e designer apaixonada por criar experiências digitais bonitas e funcionais. Com background em design e desenvolvimento, combino estética e funcionalidade em cada projeto que realizo.</p>
+                    <h2>Olá, eu sou a Nelita Conte!</h2>
+                    <p>Meu nome é Nelita, tenho 18 anos e sou uma desenvolvedora web e designer apaixonada por criar experiências digitais bonitas e funcionais. Com background em design e desenvolvimento, combino estética e funcionalidade em cada projeto que realizo.</p>
                     
-                    <p>Minha jornada no mundo da tecnologia começou há 3 anos, quando descobri minha paixão por transformar ideias em realidade digital. Desde então, tenho me dedicado a aprender novas tecnologias e acompanhar as tendências do mercado.</p>
+                    <p>Minha jornada no mundo da tecnologia começou durante o ensino médio, quando descobri minha paixão por transformar ideias em realidade digital. Desde então, tenho me dedicado a aprender novas tecnologias e acompanhar as tendências do mercado, sempre buscando evoluir como profissional.</p>
                     
-                    <div class="texto-destaque">
-                        <p>"Acredito que um bom design não é apenas sobre como algo parece, mas sobre como funciona e como faz as pessoas se sentirem."</p>
+                    <p>Fora do mundo digital, tenho vários hobbies que me inspiram e me fazem feliz:</p>
+                    
+                    <div class="interesses">
+                        <div class="interesse">
+                            <i class="fas fa-book"></i>
+                            Amo ler livros de todos os gêneros
+                        </div>
+                        <div class="interesse">
+                            <i class="fas fa-palette"></i>
+                            Gosto muito de me maquiar
+                        </div>
+                        <div class="interesse">
+                            <i class="fas fa-shopping-bag"></i>
+                            Amo ir no little shopping da minha cidade
+                        </div>
                     </div>
                     
-                    <p>Minha especialidade é criar interfaces intuitivas e responsivas que proporcionam uma excelente experiência ao usuário. Trabalho principalmente com HTML5, CSS3, JavaScript e frameworks modernos, sempre buscando as melhores práticas de desenvolvimento.</p>
-                    
-                    <p>Além do desenvolvimento front-end, também tenho experiência com design de interfaces (UI/UX), criando protótipos e wireframes que orientam o desenvolvimento de produtos digitais coesos e alinhados com as necessidades dos usuários.</p>
-                    
-                    <p>Quando não estou codando ou criando designs, você pode me encontrar lendo sobre novas tecnologias, explorando tendências de design ou aproveitando um bom café enquanto planejo meus próximos projetos criativos.</p>
+                    <p>Minha especialidade é criar interfaces intuitivas e responsivas que proporcionam uma excelente experiência ao usuário. Trabalho principalmente com HTML5, CSS3, JavaScript e frameworks modernos.</p>
                     
                     <h3>Minhas Habilidades</h3>
                     <div class="habilidades">
@@ -818,122 +568,10 @@
                         <span class="habilidade">CSS3</span>
                         <span class="habilidade">JavaScript</span>
                         <span class="habilidade">UI/UX Design</span>
-                        <span class="habilidade">Responsive Design</span>
-                        <span class="habilidade">Figma</span>
-                        <span class="habilidade">Adobe XD</span>
-                        <span class="habilidade">Git</span>
                         <span class="habilidade">React</span>
-                        <span class="habilidade">Bootstrap</span>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-    
-    <!-- Seção Portfólio -->
-    <section id="portfolio">
-        <div class="container">
-            <h2 class="section-title">Meu Portfólio</h2>
-            <div class="portfolio-filtros">
-                <button class="filtro-btn active" data-filter="todos">Todos</button>
-                <button class="filtro-btn" data-filter="web">Web</button>
-                <button class="filtro-btn" data-filter="design">Design</button>
-                <button class="filtro-btn" data-filter="apps">Apps</button>
-            </div>
-            <div class="portfolio-grid">
-                <div class="projeto" data-category="web">
-                    <div class="projeto-img">
-                        <i class="fas fa-laptop-code"></i>
-                    </div>
-                    <div class="projeto-conteudo">
-                        <h3>Site Pessoal</h3>
-                        <p>Meu primeiro site desenvolvido com HTML, CSS e JavaScript.</p>
-                    </div>
-                    <div class="projeto-overlay">
-                        <div class="projeto-links">
-                            <a href="#" class="projeto-link"><i class="fas fa-external-link-alt"></i></a>
-                            <a href="#" class="projeto-link"><i class="fab fa-github"></i></a>
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="projeto" data-category="design">
-                    <div class="projeto-img">
-                        <i class="fas fa-palette"></i>
-                    </div>
-                    <div class="projeto-conteudo">
-                        <h3>Identidade Visual</h3>
-                        <p>Criação de identidade visual para marca de cosméticos.</p>
-                    </div>
-                    <div class="projeto-overlay">
-                        <div class="projeto-links">
-                            <a href="#" class="projeto-link"><i class="fas fa-external-link-alt"></i></a>
-                            <a href="#" class="projeto-link"><i class="fab fa-behance"></i></a>
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="projeto" data-category="web">
-                    <div class="projeto-img">
-                        <i class="fas fa-shopping-cart"></i>
-                    </div>
-                    <div class="projeto-conteudo">
-                        <h3>E-commerce</h3>
-                        <p>Desenvolvimento de loja virtual para boutique de roupas.</p>
-                    </div>
-                    <div class="projeto-overlay">
-                        <div class="projeto-links">
-                            <a href="#" class="projeto-link"><i class="fas fa-external-link-alt"></i></a>
-                            <a href="#" class="projeto-link"><i class="fab fa-github"></i></a>
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="projeto" data-category="apps">
-                    <div class="projeto-img">
-                        <i class="fas fa-mobile-alt"></i>
-                    </div>
-                    <div class="projeto-conteudo">
-                        <h3>App de Tarefas</h3>
-                        <p>Aplicativo mobile para organização de tarefas diárias.</p>
-                    </div>
-                    <div class="projeto-overlay">
-                        <div class="projeto-links">
-                            <a href="#" class="projeto-link"><i class="fas fa-external-link-alt"></i></a>
-                            <a href="#" class="projeto-link"><i class="fab fa-github"></i></a>
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="projeto" data-category="design">
-                    <div class="projeto-img">
-                        <i class="fas fa-book-open"></i>
-                    </div>
-                    <div class="projeto-conteudo">
-                        <h3>Blog de Viagens</h3>
-                        <p>Design e desenvolvimento de blog sobre experiências de viagem.</p>
-                    </div>
-                    <div class="projeto-overlay">
-                        <div class="projeto-links">
-                            <a href="#" class="projeto-link"><i class="fas fa-external-link-alt"></i></a>
-                            <a href="#" class="projeto-link"><i class="fab fa-github"></i></a>
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="projeto" data-category="web">
-                    <div class="projeto-img">
-                        <i class="fas fa-camera"></i>
-                    </div>
-                    <div class="projeto-conteudo">
-                        <h3>Portfólio Fotográfico</h3>
-                        <p>Galeria online para fotógrafo profissional.</p>
-                    </div>
-                    <div class="projeto-overlay">
-                        <div class="projeto-links">
-                            <a href="#" class="projeto-link"><i class="fas fa-external-link-alt"></i></a>
-                            <a href="#" class="projeto-link"><i class="fab fa-github"></i></a>
-                        </div>
+                        <span class="habilidade">Figma</span>
+                        <span class="habilidade">Git</span>
+                        <span class="habilidade">Responsive Design</span>
                     </div>
                 </div>
             </div>
@@ -949,22 +587,22 @@
                     <form id="formContato">
                         <div class="grupo-form">
                             <label for="nome">Nome</label>
-                            <input type="text" id="nome" name="nome" required>
+                            <input type="text" id="nome" name="nome" required placeholder="Seu nome completo">
                         </div>
                         
                         <div class="grupo-form">
                             <label for="email">E-mail</label>
-                            <input type="email" id="email" name="email" required>
+                            <input type="email" id="email" name="email" required placeholder="seu.email@exemplo.com">
                         </div>
                         
                         <div class="grupo-form">
                             <label for="assunto">Assunto</label>
-                            <input type="text" id="assunto" name="assunto" required>
+                            <input type="text" id="assunto" name="assunto" required placeholder="Assunto da mensagem">
                         </div>
                         
                         <div class="grupo-form">
                             <label for="mensagem">Mensagem</label>
-                            <textarea id="mensagem" name="mensagem" rows="5" required></textarea>
+                            <textarea id="mensagem" name="mensagem" rows="5" required placeholder="Descreva seu projeto ou dúvida..."></textarea>
                         </div>
                         
                         <button type="submit" class="btn btn-enviar">Enviar Mensagem</button>
@@ -978,7 +616,8 @@
                         </div>
                         <div class="texto-contato">
                             <h3>E-mail</h3>
-                            <p>taina.dev@exemplo.com</p>
+                            <p>nelita.conte@escola.pr.gov.br</p>
+                            <p>contato.nelita@gmail.com</p>
                         </div>
                     </div>
                     
@@ -988,7 +627,8 @@
                         </div>
                         <div class="texto-contato">
                             <h3>Telefone</h3>
-                            <p>(11) 99999-9999</p>
+                            <p>(41) 98765-4321</p>
+                            <p>(41) 3333-4444</p>
                         </div>
                     </div>
                     
@@ -1002,8 +642,8 @@
                             <div class="redes-sociais">
                                 <a href="#" class="rede-social"><i class="fab fa-instagram"></i></a>
                                 <a href="#" class="rede-social"><i class="fab fa-linkedin-in"></i></a>
-                                <a href="#" class="rede-social"><i class="fab fa-behance"></i></a>
                                 <a href="#" class="rede-social"><i class="fab fa-github"></i></a>
+                                <a href="#" class="rede-social"><i class="fab fa-whatsapp"></i></a>
                             </div>
                         </div>
                     </div>
@@ -1012,64 +652,41 @@
         </div>
     </section>
     
-    <!-- Botão flutuante -->
-    <div class="btn-flutuante" id="btnTopo">
-        <i class="fas fa-arrow-up"></i>
-    </div>
-    
     <!-- Footer -->
     <footer>
         <div class="container">
             <div class="footer-content">
-                <div class="footer-logo">Tainá</div>
+                <div class="footer-logo">Nelita Conte</div>
                 <p>Desenvolvedora Web & Designer</p>
                 <div class="footer-links">
                     <a href="#sobre">Sobre</a>
-                    <a href="#portfolio">Portfólio</a>
                     <a href="#contato">Contato</a>
                 </div>
             </div>
             <div class="copyright">
-                <p>&copy; 2023 Tainá. Todos os direitos reservados.</p>
+                <p>&copy; 2023 Nelita Conte. Todos os direitos reservados.</p>
             </div>
         </div>
     </footer>
 
+    <!-- Botão Voltar ao Topo -->
+    <a href="#" class="btn-topo" id="btnTopo">
+        <i class="fas fa-arrow-up"></i>
+    </a>
+
     <script>
-        // Navegação fixa ao scroll
-        window.addEventListener('scroll', function() {
-            const nav = document.getElementById('navbar');
-            if (window.scrollY > 50) {
-                nav.classList.add('scrolled');
-            } else {
-                nav.classList.remove('scrolled');
-            }
+        // Formulário de contato
+        const formContato = document.getElementById('formContato');
+        
+        formContato.addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            // Simulação de envio
+            alert('Obrigada pela sua mensagem! Entrarei em contato em breve.');
+            formContato.reset();
         });
         
-        // Filtro do portfólio
-        const filtroBtns = document.querySelectorAll('.filtro-btn');
-        const projetos = document.querySelectorAll('.projeto');
-        
-        filtroBtns.forEach(btn => {
-            btn.addEventListener('click', () => {
-                // Remove a classe active de todos os botões
-                filtroBtns.forEach(b => b.classList.remove('active'));
-                // Adiciona a classe active ao botão clicado
-                btn.classList.add('active');
-                
-                const filter = btn.getAttribute('data-filter');
-                
-                projetos.forEach(projeto => {
-                    if (filter === 'todos' || projeto.getAttribute('data-category') === filter) {
-                        projeto.style.display = 'block';
-                    } else {
-                        projeto.style.display = 'none';
-                    }
-                });
-            });
-        });
-        
-        // Animação de scroll suave
+        // Navegação suave
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             anchor.addEventListener('click', function(e) {
                 e.preventDefault();
@@ -1090,69 +707,19 @@
         // Botão voltar ao topo
         const btnTopo = document.getElementById('btnTopo');
         
-        btnTopo.addEventListener('click', () => {
-            window.scrollTo({
-                top: 0,
-                behavior: 'smooth'
-            });
-        });
-        
-        // Mostrar/ocultar botão voltar ao topo
         window.addEventListener('scroll', () => {
             if (window.scrollY > 300) {
                 btnTopo.style.display = 'flex';
             } else {
                 btnTopo.style.display = 'none';
             }
-        });
-        
-        // Formulário de contato
-        const formContato = document.getElementById('formContato');
-        
-        formContato.addEventListener('submit', function(e) {
-            e.preventDefault();
             
-            // Simulação de envio
-            alert('Obrigada pela sua mensagem! Entrarei em contato em breve.');
-            formContato.reset();
-        });
-        
-        // Upload de foto
-        const fotoInput = document.getElementById('foto-input');
-        const fotoPreview = document.getElementById('foto-preview');
-        const fotoPlaceholder = document.getElementById('foto-placeholder');
-        const uploadBtn = document.getElementById('upload-btn');
-        
-        uploadBtn.addEventListener('click', () => {
-            fotoInput.click();
-        });
-        
-        fotoInput.addEventListener('change', function() {
-            const file = this.files[0];
-            
-            if (file) {
-                const reader = new FileReader();
-                
-                reader.addEventListener('load', function() {
-                    fotoPreview.src = this.result;
-                    fotoPreview.style.display = 'block';
-                    fotoPlaceholder.style.display = 'none';
-                    
-                    // Salvar a foto no localStorage para persistência
-                    localStorage.setItem('tainaFoto', this.result);
-                });
-                
-                reader.readAsDataURL(file);
-            }
-        });
-        
-        // Verificar se há foto salva no localStorage
-        window.addEventListener('DOMContentLoaded', () => {
-            const savedFoto = localStorage.getItem('tainaFoto');
-            if (savedFoto) {
-                fotoPreview.src = savedFoto;
-                fotoPreview.style.display = 'block';
-                fotoPlaceholder.style.display = 'none';
+            // Navegação fixa ao scroll
+            const nav = document.getElementById('navbar');
+            if (window.scrollY > 50) {
+                nav.classList.add('scrolled');
+            } else {
+                nav.classList.remove('scrolled');
             }
         });
         
@@ -1165,19 +732,14 @@
         const observer = new IntersectionObserver((entries) => {
             entries.forEach(entry => {
                 if (entry.isIntersecting) {
-                    entry.target.classList.add('visible');
+                    entry.target.classList.add('fade-in');
                 }
             });
         }, observerOptions);
         
-        // Observar elementos com a classe fade-in
-        document.querySelectorAll('.fade-in').forEach(el => {
+        // Observar elementos para animação
+        document.querySelectorAll('.sobre-container > div, .item-contato, .formulario-contato').forEach(el => {
             observer.observe(el);
-        });
-        
-        // Adicionar classe fade-in aos elementos que devem ser animados
-        document.querySelectorAll('.projeto, .item-contato, .sobre-container > div').forEach(el => {
-            el.classList.add('fade-in');
         });
     </script>
 </body>
